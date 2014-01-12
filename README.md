@@ -1,6 +1,6 @@
 # sails-generate-frontend
 
-A generator for Sails.js.
+This is the default `frontend` generator for Sails.js.  It puts together the pieces of a generic web app, but by no means the "right" solution vs. any other frontend generator.  It's just set up this way for consistency, convenience, and backwards compatibility.
 
 
 ## Usage
