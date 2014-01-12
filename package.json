@@ -1,0 +1,19 @@
+{
+  "name": "sails-generate-frontend",
+  "version": "0.0.0",
+  "description": "Generate a frontend for Sails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "frontend",
+    "generator",
+    "sails",
+    "generate",
+    "plugin"
+  ],
+  "author": "a Node.js/Sails.js Contributor",
+  "license": "MIT",
+  "dependencies": {}
+}
