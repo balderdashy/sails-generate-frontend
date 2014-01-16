@@ -9,7 +9,7 @@ The latest stable version in npm is always a safe bet.
 $ npm install sails-generate-frontend
 ```
 
-[![NPM](https://nodei.co/npm/.png?downloads=true&stars=true)](https://nodei.co/npm/sails-generate-frontend/)
+[![NPM](https://nodei.co/npm/sails-generate-frontend.png?downloads=true&stars=true)](https://nodei.co/npm/sails-generate-frontend/)
 
 
 
@@ -64,7 +64,7 @@ Most of the time, when PRs don't get merged, a scarcity of time is to blame.  I 
 
 The best thing about maintaining lots of small modules is that it's trivial to override any one of them on their own.  If you need some changes merged, please feel empowered to fork this model and release your own version.
 
-If you feel that yours is the better approach, and should be the default, share it with the community via IRC, Twitter, Google Groups, etc.  Also, feel free to let the core Sails/Waterline team know and we'll take it into consideration.  
+If you feel that yours is the better approach, and should be the default, share it with the community via IRC, Twitter, Google Groups, etc.  Also, feel free to let the core Sails/Waterline team know and we'll take it into consideration.
 
 
 

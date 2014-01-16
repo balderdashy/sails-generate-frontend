@@ -1,9 +1,9 @@
 /**
  * sails-generate-frontend
- * 
+ *
  * Usage:
  * `sails-generate-frontend`
- * 
+ *
  * @type {Object}
  */
 module.exports = {
@@ -17,15 +17,15 @@ module.exports = {
 
 
 // Generator syntax:
-// 
+//
 // You can use params in your target paths:
 // {
 //   './:someScopeVariable/somethingStatic/:somethingDynamicAgain': '...'
 // }
 
 // Other directives:
-// 
-// 
+//
+//
 // Generate a folder: (`folder`)
 // './:arg0/controllers': { folder: {} }
 //

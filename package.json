@@ -1,8 +1,8 @@
 {
   "name": "sails-generate-frontend",
-  "version": "0.0.0",
+  "version": "0.10.0",
   "description": "Generate a frontend for Sails.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -13,7 +13,23 @@
     "generate",
     "plugin"
   ],
-  "author": "a Node.js/Sails.js Contributor",
+  "author": "balderdashy",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+  	"lodash": ">=2.4.x",
+  	"merge-defaults": ">=0.1.0"
+  },
+  "devDependencies": {
+    "sails-generate": "*",
+    "reportback": "*",
+    "fs-extra": "*"
+  },
+  "sails": {
+  	"generator": {
+	 		"name": "frontend",
+	 		"behavior": "overrides `sails generate frontend`",
+	 		"sailsVersion": "~0.10.0",
+	 		"main": "lib/index"
+  	}
+  }
 }

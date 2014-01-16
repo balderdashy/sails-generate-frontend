@@ -1,4 +1,4 @@
-# Contributing to `sails-generate-frontend`
+# Contributing to sails-generate-frontend
 
 
 ## Opening Issues
@@ -23,3 +23,9 @@ Please see the [contribution guide](https://github.com/balderdashy/sails/blob/v0
 
 
 [![githalytics.com alpha](https://cruel-carlota.pagodabox.com/8acf2fc2ca0aca8a3018e355ad776ed7 "githalytics.com")](http://githalytics.com/balderdashy/sails-generate-frontend/CONTRIBUTING.md)
+
+
+# Overriding a generator
+
+
+# Authoring custom generators
