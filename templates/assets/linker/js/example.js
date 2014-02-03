@@ -28,11 +28,12 @@ socket.on('connect', function socketConnected() {
     '`socket.get("/foo", function (response) { console.log(response); })`'
   );
 
-  // Attach a listener which fires every time the server publishes a message:
-  socket.on('message', function newMessageFromSails ( message ) {
+  // Attach a listener which fires every time the server publishes a debug message:
+  socket.on('debug', function newDebugMessageFromSails ( message ) {
 
     typeof console !== 'undefined' &&
-    console.log('New message received from Sails ::\n', message);
+    console.log('New debug message received from Sails ::\n', message);
 
   });
+
 });
