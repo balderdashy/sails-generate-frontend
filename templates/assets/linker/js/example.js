@@ -28,12 +28,17 @@ socket.on('connect', function socketConnected() {
     '`socket.get("/foo", function (response) { console.log(response); })`'
   );
 
-  // Attach a listener which fires every time the server publishes a debug message:
-  socket.on('debug', function newDebugMessageFromSails ( message ) {
+  // Attach a listener to a global event which fires every time the server publishes a message:
+  socket.on('message', function newDebugMessageFromSails ( message ) {
 
     typeof console !== 'undefined' &&
-    console.log('New debug message received from Sails ::\n', message);
+    console.log('New message received from Sails ::\n', message);
 
   });
+  
+  // You can also use the model events instead to receive updates
+  // about an instance,  e.g.
+  // socket.on('user', function somethingAboutAUuser () {});
+  
 
 });
