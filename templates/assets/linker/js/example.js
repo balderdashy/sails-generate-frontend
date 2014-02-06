@@ -28,17 +28,33 @@ socket.on('connect', function socketConnected() {
     '`socket.get("/foo", function (response) { console.log(response); })`'
   );
 
-  // Attach a listener to a global event which fires every time the server publishes a message:
-  socket.on('message', function newDebugMessageFromSails ( message ) {
 
-    typeof console !== 'undefined' &&
-    console.log('New message received from Sails ::\n', message);
-
+  // Subscribe to the Sails "firehose",  a development tool
+  // which lets you watch pubsub messsages emitted from your
+  // Sails models on the backend.
+  socket.get('/firehose', function nowListeningToFirehose () {
+    
+    // Attach a listener which fires every time the server publishes
+    // a message to the firehose:
+    socket.on('firehose', function newMessageFromSails ( message ) {
+      typeof console !== 'undefined' &&
+      console.log('New message published from Sails ::\n', message);
+    });
   });
-  
-  // You can also use the model events instead to receive updates
-  // about an instance,  e.g.
-  // socket.on('user', function somethingAboutAUuser () {});
-  
 
+
+  // For your app code, you'll want to use the more
+  // specific model events, e.g.
+  socket.on('user', function (msg) {
+    
+    // ...
+    console.log('New message for subscribers to user ' + msg.id);
+    console.log(msg.verb);
+    console.log(msg.data);
+    // ...
+
+    //
+    // See http://links.sailsjs.org/docs/pubsub for details.
+    // 
+  });
 });
