@@ -24,11 +24,9 @@
     "reportback": "*",
     "fs-extra": "*"
   },
-  "sails": {
-    "generator": {
+  "sailsGenerator": {
       "type": "frontend",
       "behavior": "overrides `sails generate frontend`",
       "sailsVersion": "~0.10.0"
-    }
   }
 }
