@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			files: ['assets/**/*'],
 
 			// When assets are changed:
-			tasks: ['syncAssets', 'linkAssets']
+			tasks: ['syncAssets' <%- linker ? ", 'linkAssets'" : '' %>]
 		}
 	});
 
