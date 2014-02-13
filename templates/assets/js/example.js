@@ -29,8 +29,8 @@ socket.on('connect', function socketConnected() {
   );
 
 
-  // Subscribe to the Sails "firehose",  a development tool
-  // which lets you watch pubsub messsages emitted from your
+  // Subscribe to the Sails "firehose", a development-only tool
+  // which lets you watch all pubsub messages emitted from your
   // Sails models on the backend.
   socket.get('/firehose', function nowListeningToFirehose () {
     
@@ -42,9 +42,9 @@ socket.on('connect', function socketConnected() {
     });
   });
 
-
-  // For your app code, you'll want to use the more
-  // specific model events, e.g.
+  // v.0.10 migration note--the "message" event is no longer sent
+  // by Sails for model pubsub messages.  For your app code, 
+  // you'll want to use the more specific model events, e.g.
   socket.on('user', function (msg) {
     
     // ...
