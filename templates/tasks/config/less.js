@@ -8,12 +8,6 @@ module.exports = function(grunt) {
 				src: ['*.less'],
 				dest: '.tmp/public/styles/',
 				ext: '.css'
-			}, {
-				expand: true,
-				cwd: 'assets/styles/',
-				src: ['*.less'],
-				dest: '.tmp/public/styles/',
-				ext: '.css'
 			}]
 		}
 	});
