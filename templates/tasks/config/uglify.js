@@ -1,5 +1,7 @@
 /**
  * Minifies client-side javascript `assets`.
+ *
+ *
  */
 module.exports = function(grunt) {
 

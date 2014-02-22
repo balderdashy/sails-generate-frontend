@@ -1,11 +1,15 @@
 /**
- * [less]()
+ * [less](https://github.com/gruntjs/grunt-contrib-less)
  *
  * Compiles LESS files into CSS.
- * By default, only the `assets/styles/importer.less` is compiled.
  *
- * This allows you to control the ordering yourself.
- * (i.e. put dependencies/mixins/variables/your_css_reset before other stylesheets)
+ * ---------------------------------------------------------------
+ *
+ * ### Default Behavior:
+ *
+ * Only the `assets/styles/importer.less` is compiled.
+ * This allows you to control the ordering yourself, i.e. import your
+ * dependencies, mixins, variables, resets, etc. before other stylesheets)
  */
 
 module.exports = function(grunt) {

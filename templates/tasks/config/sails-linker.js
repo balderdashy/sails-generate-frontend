@@ -1,10 +1,17 @@
 /**
- * [assetlinker](https://github.com/Zolmeister/grunt-sails-linker)
+ * [sails-linker](https://github.com/Zolmeister/grunt-sails-linker)
  *
  * Automatically inject <script> tags for javascript files and <link> tags
  * for css files.  Also automatically links an output file containing precompiled
  * templates using a <script> tag.
+ *
+ * ---------------------------------------------------------------
+ * ### Default Behavior:
+ *
+ * ...
+ *
  */
+
 module.exports = function(grunt) {
 
 	grunt.config.set('sails-linker', {
