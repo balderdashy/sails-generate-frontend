@@ -1,7 +1,9 @@
 /**
+ * [assetlinker](https://github.com/Zolmeister/grunt-sails-linker)
+ *
  * Automatically inject <script> tags for javascript files and <link> tags
- * for css files.  Also precompiles JST templates and includes them using a
- * <script> tag.
+ * for css files.  Also automatically links an output file containing precompiled
+ * templates using a <script> tag.
  */
 module.exports = function(grunt) {
 
