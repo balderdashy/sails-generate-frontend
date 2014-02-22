@@ -1,14 +1,18 @@
-var injectedFiles = require('../values/injectedFiles');
-
+/**
+ * Concatenates files.
+ * https://github.com/gruntjs/grunt-contrib-concat
+ *
+ * javascript and CSS files together.
+ */
 module.exports = function(grunt) {
 
 	grunt.config.set('concat', {
 		js: {
-			src: injectedFiles.jsFilesToInject,
+			src: pipeline.jsFilesToInject,
 			dest: '.tmp/public/concat/production.js'
 		},
 		css: {
-			src: injectedFiles.cssFilesToInject,
+			src: pipeline.cssFilesToInject,
 			dest: '.tmp/public/concat/production.css'
 		}
 	});

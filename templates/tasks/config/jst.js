@@ -1,4 +1,11 @@
-var injectedFiles = require('../values/injectedFiles');
+/**
+ * Precompiles Underscore templates to a `.jst` file.
+ * https://github.com/gruntjs/grunt-contrib-jst
+ *
+ * (i.e. basically it takes HTML files and turns them into tiny little
+ *  javascript functions that you pass data to and return HTML. This can
+ *  speed up template rendering on the client, and reduce bandwidth usage.)
+ */
 
 module.exports = function(grunt) {
 
@@ -9,15 +16,22 @@ module.exports = function(grunt) {
 	grunt.config.set('jst', {
 		dev: {
 
-			// To use other sorts of templates, specify the regexp below:
+			// To use other sorts of templates, specify a regexp like the example below:
 			// options: {
 			//   templateSettings: {
 			//     interpolate: /\{\{(.+?)\}\}/g
 			//   }
 			// },
 
+			// Note that the interpolate setting above is simply an example of overwriting lodash's
+			// default interpolation. If you want to parse templates with the default _.template behavior
+			// (i.e. using <div><%= this.id %></div>), there's no need to overwrite `templateSettings.interpolate`.
+
+
 			files: {
-				'.tmp/public/jst.js': injectedFiles.templateFilesToInject
+				// e.g.
+				// 'relative/path/from/gruntfile/to/compiled/template/destination'  : ['relative/path/to/sourcefiles/**/*.html']
+				'.tmp/public/jst.js': require('../pipeline').templateFilesToInject
 			}
 		}
 	});

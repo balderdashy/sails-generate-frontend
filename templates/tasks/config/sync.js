@@ -1,3 +1,6 @@
+/**
+ * Syncs files from the `assets` folder to `.tmp/public`.
+ */
 module.exports = function(grunt) {
 
 	grunt.config.set('sync', {

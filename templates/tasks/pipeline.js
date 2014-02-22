@@ -32,13 +32,14 @@ var jsFilesToInject = [
 
   // A simpler boilerplate library for getting you up and running w/ an
   // automatic listener for incoming messages from Socket.io.
-  'js/app.js',
+  'js/connection.example.js',
 
   // *->    put other dependencies here   <-*
 
   // All of the rest of your app scripts imported here
   'js/**/*.js'
 ];
+
 
 /**
  * Client-side HTML templates are injected using the sources below
@@ -51,8 +52,8 @@ var jsFilesToInject = [
  */
 
 var templateFilesToInject = [
-  'template/**/*.html'
-]
+  'templates/**/*.html'
+];
 
 module.exports = {
   // Modify css file injection paths to use

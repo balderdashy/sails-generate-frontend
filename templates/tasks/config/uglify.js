@@ -1,3 +1,6 @@
+/**
+ * Minifies client-side javascript `assets`.
+ */
 module.exports = function(grunt) {
 
 	grunt.config.set('uglify', {
