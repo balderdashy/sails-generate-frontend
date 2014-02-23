@@ -4,7 +4,7 @@
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, read on!
 
 
-## How does this work?
+#### How does this work?
 
 The asset pipeline bundled in Sails is a set of Grunt tasks configured with conventional defaults designed to make your project more consistent and productive.
 
@@ -12,17 +12,17 @@ The entire front-end asset workflow in Sails is completely customizable-- while 
 
 
 
-## Can I customize this for SASS, Angular, client-side Jade templates, etc?
+#### Can I customize this for SASS, Angular, client-side Jade templates, etc?
 
 You can modify, omit, or replace any of these Grunt tasks to fit your requirements. You can also add your own Grunt tasks- just add a `someTask.js` file in the `grunt/config` directory to configure the new task, then register it with the appropriate parent task(s) (see files in `grunt/register/*.js`).
 
 
-## Do I have to use Grunt?
+#### Do I have to use Grunt?
 
 Nope! To disable Grunt integration in Sails, just delete your Gruntfile or disable the Grunt hook.
 
 
-## What if I'm not building a web frontend?
+#### What if I'm not building a web frontend?
 
 That's ok! A core tenant of Sails is client-agnosticism-- it's especially designed for building APIs used by all sorts of clients; native Android/iOS/Cordova, serverside SDKs, etc.
 
