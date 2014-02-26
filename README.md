@@ -3,7 +3,7 @@
 # sails-generate-frontend
 
 
-A `frontend` generator for use with the Sails command-line interface. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md);
+A `frontend` generator for use with the Sails command-line interface. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
 
 
 ### Installation
