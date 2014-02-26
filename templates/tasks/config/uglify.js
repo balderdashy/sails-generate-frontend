@@ -1,6 +1,12 @@
 /**
+ * Minify files with UglifyJS.
+ *
+ * ---------------------------------------------------------------
+ *
  * Minifies client-side javascript `assets`.
  *
+ * For usage docs see:
+ * 		https://github.com/gruntjs/grunt-contrib-uglify
  *
  */
 module.exports = function(grunt) {

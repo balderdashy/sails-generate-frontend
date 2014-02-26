@@ -1,16 +1,14 @@
 /**
- * [sync](https://github.com/tomusdrw/grunt-sync)
- *
- * A grunt task to keep directories in sync. It is very similar to
- * `grunt-contrib-copy`, but instead of deleting the destination files
- * and recopying them every time, it syncs only the files which have
- * actually changed.
+ * A grunt task to keep directories in sync. It is very similar to grunt-contrib-copy
+ * but tries to copy only those files that has actually changed.
  *
  * ---------------------------------------------------------------
- * ### Default Behavior:
  *
  * Synchronize files from the `assets` folder to `.tmp/public`,
  * smashing anything that's already there.
+ *
+ * For usage docs see:
+ * 		https://github.com/tomusdrw/grunt-sync
  *
  */
 module.exports = function(grunt) {

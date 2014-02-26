@@ -1,17 +1,16 @@
 /**
- * [sails-linker](https://github.com/Zolmeister/grunt-sails-linker)
+ * Autoinsert script tags (or other filebased tags) in an html file.
+ *
+ * ---------------------------------------------------------------
  *
  * Automatically inject <script> tags for javascript files and <link> tags
  * for css files.  Also automatically links an output file containing precompiled
  * templates using a <script> tag.
  *
- * ---------------------------------------------------------------
- * ### Default Behavior:
- *
- * ...
+ * For usage docs see:
+ * 		https://github.com/Zolmeister/grunt-sails-linker
  *
  */
-
 module.exports = function(grunt) {
 
 	grunt.config.set('sails-linker', {
