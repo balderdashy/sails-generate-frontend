@@ -1,24 +1,27 @@
 /**
  * grunt/pipeline.js
  *
- * The order your css, javascript, and template files should be injected.
+ * The order in which your css, javascript, and template files should be
+ * compiled and linked from your views and static HTML files.
+ *
+ * (Note that you can take advantage of Grunt-style wildcard/glob/splat expressions
+ * for matching multiple files.)
  */
 
 
 
 // CSS files to inject in order
-// (uses Grunt-style wildcard/glob/splat expressions)
 //
 // (if you're using LESS with the built-in default config, you'll want
-//  to change your importer.less file instead.)
-var cssFilesToInject = [
+//  to change `assets/styles/importer.less` instead.)
+module.exports.cssFilesToInject = [
   'styles/**/*.css'
 ];
 
 
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
-var jsFilesToInject = [
+module.exports.jsFilesToInject = [
 
   // Below, as a demonstration, you'll see the built-in dependencies
   // linked in the proper order order
@@ -49,9 +52,9 @@ var jsFilesToInject = [
 // By default, Sails uses JST templates and precompiles them into
 // functions for you.  If you want to use jade, handlebars, dust, etc.,
 // with the linker, no problem-- you'll just want to make sure the precompiled
-// templates get spit out to the same file.  Be sure and check out `grunt/README.md`
+// templates get spit out to the same file.  Be sure and check out `tasks/README.md`
 // for information on customizing and installing new tasks.
-var templateFilesToInject = [
+module.exports.templateFilesToInject = [
   'templates/**/*.html'
 ];
 
@@ -62,22 +65,15 @@ var templateFilesToInject = [
 
 
 
-// Export this asset pipeline for the other tasks to consume,
-// but first, prefix relative paths to source files so they
-// point to the proper locations (i.e. where the other Grunt
-// tasks spit them out, or in some cases, where they reside in
-// the first place)
-//
-// TODO: pull this out into the grunt tasks that use this config
-// to make this file simpler
-module.exports = {
-  cssFilesToInject: cssFilesToInject.map(function(path) {
-    return '.tmp/public/' + path;
-  }),
-  jsFilesToInject: jsFilesToInject.map(function(path) {
-    return '.tmp/public/' + path;
-  }),
-  templateFilesToInject: templateFilesToInject.map(function(path) {
-    return 'assets/' + path;
-  })
-};
+// Prefix relative paths to source files so they point to the proper locations
+// (i.e. where the other Grunt tasks spit them out, or in some cases, where
+// they reside in the first place)
+module.exports.cssFilesToInject.map(function(path) {
+  return '.tmp/public/' + path;
+});
+module.exports.jsFilesToInject.map(function(path) {
+  return '.tmp/public/' + path;
+});
+module.exports.templateFilesToInject.map(function(path) {
+  return 'assets/' + path;
+});
