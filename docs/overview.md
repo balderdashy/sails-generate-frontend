@@ -18,7 +18,7 @@ There are three tasks that are accessable to developers via the terminal. This i
 5. Compiles coffeescript files in `/assets/js` to javascript and places them in the `/.tmp/public/js` directory.
 6. Automatically injects `<script>` and `<link>` tags into any HTML located in `/.tmp/public` or EJS file in `/views`.
 The important thing to understand is that this asset injection should be placed in files that act as a layout file for your app. For single page apps this would be something like an `index.html` file and for apps that send server side views this should be something like a `layout.ejs` file. Usage for how to injet files is showin in `tasks/config/sails-linker.js` or can be found [here](https://github.com/Zolmeister/grunt-sails-linker). A more detailed description of this task can be found below.
-7. Sets up a watch task that will run this entire task again if there are changes detected in the `/assets` directory. This task is optimized so that instead of deleting entire directories and files, it just syncs changes that were made.
+7. Sets up a watch task that will run this entire task again if there are changes detected in the `/assets` directory or the `tasks/pipeline.js` file. This task is optimized so that instead of deleting entire directories and files, it just syncs changes that were made.
 
 ### sails build
 1. Runs the exact same as sails lift from steps 1-4.
