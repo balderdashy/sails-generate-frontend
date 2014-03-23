@@ -23,15 +23,8 @@ var cssFilesToInject = [
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
 
-	// Below, as a demonstration, you'll see the socket.io
-	// client, the sails.io.js client, and an example script
-	// which creates a socket connection included in the proper
-	// order.  You can change this any way you like.
-	'js/dependencies/socket.io.js',
-	'js/dependencies/sails.io.js',
-	'js/dependencies/connection.example.js',
-
-	// Other dependencies like jQuery or Angular here
+	// Dependencies like sails.io.js, jQuery, or Angular
+	// are brought in here
 	'js/dependencies/**/*.js',
 
 	// All of the rest of your client-side js files
