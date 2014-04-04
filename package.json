@@ -22,7 +22,9 @@
   "devDependencies": {
     "sails-generate": "*",
     "reportback": "*",
-    "fs-extra": "*"
+    "fs-extra": "~0.8.1",
+    "bower": "~1.3.1",
+    "async": "~0.6.2"
   },
   "sailsGenerator": {
     "type": "frontend",
