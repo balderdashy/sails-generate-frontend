@@ -4,7 +4,8 @@
   "description": "Generate a frontend for Sails.",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "node build.js"
   },
   "keywords": [
     "frontend",

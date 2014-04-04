@@ -28,7 +28,7 @@ function done(err, async_data) {
   if (err) return console.error(err);
 
   // Delete bower_components
-  removeSync('bower_components');
+  fsx.removeSync('bower_components');
 
   console.log('Done.');
 });
