@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-frontend",
-  "version": "0.10.19",
+  "version": "0.10.20",
   "description": "Generate a frontend for Sails.",
   "main": "lib/index.js",
   "scripts": {
