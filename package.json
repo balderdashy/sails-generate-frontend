@@ -1,6 +1,6 @@
 {
   "name": "sails-generate-frontend-gulp",
-  "version": "0.10.20",
+  "version": "0.0.1",
   "description": "Generate a frontend for Sails.",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "generate",
     "plugin"
   ],
-  "author": "balderdashy",
+  "author": "karnith",
   "license": "MIT",
   "dependencies": {
     "lodash": ">=2.4.x",
