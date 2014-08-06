@@ -1,20 +1,22 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
 
-# sails-generate-frontend
+# sails-generate-frontend-gulp
 
 
-A `frontend` generator for use with the Sails command-line interface. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
+A `frontend` generator for use with the Sails command-line interface that works with sails lift. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
 
 
 ### Installation
 
 Certain generators are installed by default in Sails, but they can be overridden.  Check the [Sails docs](http://sailsjs.org/#!documentation) for information on installing generator overrides / custom generators.
 
-<!--
 ```sh
-$ npm install sails-generate-frontend
+$ npm install -g sails-generate-backend-gulp
+$ npm install -g sails-generate-gulpfile
+$ npm install -g sails-generate-frontend-gulp
+$ npm install -g sails-generate-new-gulp
+
 ```
--->
 
 
 ### Production Usage
