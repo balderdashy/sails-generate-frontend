@@ -9,12 +9,10 @@
  * For usage docs see:
  * 		https://github.com/gruntjs/grunt-contrib-clean
  */
-module.exports = function(grunt) {
-
-	grunt.config.set('clean', {
-		dev: ['.tmp/public/**'],
-		build: ['www']
+module.exports = function(gulp, plugins) {
+	gulp.task('clean', function() {
+		return gulp.src(['.tmp/public/styles', '.tmp/public/js', '.tmp/public/images'], {read: false})
+				.pipe(plugins.rimraf())
+				.pipe(plugins.notify({ message: 'Clean task complete' }));;
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-clean');
 };
