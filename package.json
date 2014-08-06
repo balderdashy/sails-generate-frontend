@@ -1,5 +1,5 @@
 {
-  "name": "sails-generate-frontend",
+  "name": "sails-generate-frontend-gulp",
   "version": "0.10.20",
   "description": "Generate a frontend for Sails.",
   "main": "lib/index.js",
