@@ -13,26 +13,10 @@
  * For usage docs see:
  * 		https://github.com/gruntjs/grunt-contrib-copy
  */
-module.exports = function(grunt) {
-
-	grunt.config.set('copy', {
-		dev: {
-			files: [{
-				expand: true,
-				cwd: './assets',
-				src: ['**/*.!(coffee|less)'],
-				dest: '.tmp/public'
-			}]
-		},
-		build: {
-			files: [{
-				expand: true,
-				cwd: '.tmp/public',
-				src: ['**/*'],
-				dest: 'www'
-			}]
-		}
+module.exports = function(gulp, plugins) {
+	gulp.task('copy', function() {
+		return gulp.src('./assets/**/**.!(coffee|less|css|js)')
+				.pipe(gulp.dest('.tmp/public'))
+				.pipe(plugins.notify({ message: 'Copy task complete' }));
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-copy');
 };
