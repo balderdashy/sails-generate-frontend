@@ -14,9 +14,9 @@
  */
 module.exports = function(gulp, plugins) {
 	gulp.task('watch', function() {
-		// Watch .less files
-		gulp.watch('assets/styles/**/*.less', ['styles']);
-		// Watch .js files
+		// Watch Style files
+		gulp.watch(['assets/styles/**/*.less', 'assets/styles/**/*.css'], ['styles', 'linker']);
+		// Watch JS files
 		gulp.watch('assets/js/**/*.js', ['scripts']);
 		// Watch image files
 		gulp.watch('assets/images/**/*', ['images']);
