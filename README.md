@@ -37,6 +37,8 @@ $ npm install -g sails-generate-new-gulp
 
 ### Production Usage
 
+** It is important to note that css files will automatically be minified and autoprefixed for last two versions of Safari 5, IE 10, opera 12.1, ios 6 and android 4. The js files will automatically be concatenated to main.min.js. When adding files to assets folder while system is live, please make sure to add files one at a time (for now) and wait for the task to finish before adding the next file or else not all of the tasks will run on the files.
+
 ##### On the command line
 
 ```sh
