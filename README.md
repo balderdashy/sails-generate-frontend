@@ -3,7 +3,7 @@
 # sails-generate-frontend-gulp
 
 
-A `frontend` generator for use with the Sails command-line interface that works with sails lift. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
+A `frontend` generator for use with the Sails command-line interface that works with gulp and sails lift. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
 
 
 ### Installation
@@ -35,7 +35,7 @@ var sailsgen = require('sails-generate');
 var scope = {
 	rootPath: path.resolve(__dirname)
 };
-sailsgen(require('sails-generate-frontend'), scope, function (err) {
+sailsgen(require('sails-generate-frontend-gulp'), scope, function (err) {
 	if (err) throw err;
 
 	// It worked.
