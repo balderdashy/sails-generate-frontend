@@ -5,7 +5,7 @@ module.exports = function(gulp, plugins, path) {
 				.pipe(plugins.less(/* {
 					paths: [ path.join(__dirname, 'assets') ]
 				} */))
-				.pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'ie 10', 'opera 12.1', 'ios 6', 'android 4'))
+				.pipe(plugins.autoprefixer('last 2 version', 'safari 5', 'ie 10', 'opera 12.1', 'ios 6', 'android 4'))
 				.pipe(plugins.rename({ suffix: '.min' }))
 				.pipe(plugins.minifyCss())
 				.pipe(gulp.dest('./.tmp/public/styles'))
