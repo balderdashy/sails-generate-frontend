@@ -13,15 +13,33 @@
  */
 // todo - add css and templates sections to layout.ejs. add prod,dev, etc
 module.exports = function(gulp, plugins) {
-	gulp.task('linker',['scripts'], function() {
+	gulp.task('linker',['scripts', 'styles'], function() {
 		// Read templates
-		return gulp.src('views/layout.ejs')
+		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JavaScript
 				.pipe(plugins.linker({
-					scripts: ['.tmp/public/js/**.js'],
+					scripts: [require('../pipeline').jsFilesToInject],
 					startTag: '<!--SCRIPTS-->',
 					endTag: '<!--SCRIPTS END-->',
 					fileTmpl: '<script src="%s"></script>',
+					appRoot: '.tmp/public',
+					relative: true
+				}))
+				// Link the Styles
+				.pipe(plugins.linker({
+					scripts: [require('../pipeline').cssFilesToInject],
+					startTag: '<!--STYLES-->',
+					endTag: '<!--STYLES END-->',
+					fileTmpl: '<link rel="stylesheet" href="%s">',
+					appRoot: '.tmp/public',
+					relative: true
+				}))
+				// Link the JST Templates
+				.pipe(plugins.linker({
+					scripts: ['.tmp/public/jst.js'],
+					startTag: '<!--TEMPLATES-->',
+					endTag: '<!--TEMPLATES END-->',
+					fileTmpl: '<script type="text/javascript" src="%s"></script>',
 					appRoot: '.tmp/public',
 					relative: true
 				}))
