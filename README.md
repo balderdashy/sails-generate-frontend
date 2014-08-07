@@ -18,6 +18,22 @@ $ npm install -g sails-generate-new-gulp
 
 ```
 
+## .sailsrc
+
+.sailsrc needs to be added to the working dir with the following:
+
+```sh
+{
+    "generators": {
+        "modules": {
+            "new": "sails-generate-new-gulp",
+            "frontend": "sails-generate-frontend-gulp",
+            "backend": "sails-generate-backend-gulp",
+            "gulpfile": "sails-generate-gulpfile"
+        }
+    }
+}
+```
 
 ### Production Usage
 
