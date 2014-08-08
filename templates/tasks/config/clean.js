@@ -10,9 +10,14 @@
  * 		https://github.com/gruntjs/grunt-contrib-clean
  */
 module.exports = function(gulp, plugins) {
-	gulp.task('clean', function() {
-		return gulp.src(['.tmp/public/styles', '.tmp/public/js', '.tmp/public/images'], {read: false})
-				.pipe(plugins.rimraf())
+	gulp.task('clean:dev', function() {
+		return gulp.src('.tmp/public/**', {read: false})
+				.pipe(plugins.rimraf({ force: true }))
+				.pipe(plugins.notify({ message: 'Clean task complete' }));;
+	});
+	gulp.task('clean:build', function() {
+		return gulp.src('www', {read: false})
+				.pipe(plugins.rimraf({ force: true }))
 				.pipe(plugins.notify({ message: 'Clean task complete' }));;
 	});
 };
