@@ -1,11 +1,11 @@
 // todo - modify fully for gulp
 module.exports = function (gulp) {
-	//grunt.registerTask('linkAssets', [
-	//	'sails-linker:devJs',
-	//	'sails-linker:devStyles',
-	//	'sails-linker:devTpl',
-	//	'sails-linker:devJsJade',
-	//	'sails-linker:devStylesJade',
-	//	'sails-linker:devTplJade'
-	//]);
+	gulp.task('linkAssets', [
+		'sails-linker-gulp:devJs',
+		'sails-linker-gulp:devStyles',
+		'sails-linker-gulp:devTpl'/* ,
+		'sails-linker-gulp:devJsJade',
+		'sails-linker-gulp:devStylesJade',
+		'sails-linker-gulp:devTplJade' */
+	]);
 };
