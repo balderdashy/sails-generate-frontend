@@ -1,10 +1,7 @@
 module.exports = function (gulp) {
-	gulp.task('buildProd', [
+	gulp.task('build', [
 		'compileAssets',
-		'concat',
-		'uglify',
-		'cssmin',
-		'linkAssetsBuildProd',
+		'linkAssetsBuild',
 		'clean:build',
 		'copy:build'
 	]);
