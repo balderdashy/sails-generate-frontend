@@ -18,9 +18,10 @@ module.exports = function(gulp, plugins) {
 		'templates/**/*.html'
 	];
 
-	gulp.task('jst', function() {
-		gulp.src(require('../pipeline').templateFilesToInject)
-		.pipe(plugins.jst())
-		.pipe(gulp.dest('.tmp/public/jst.js'));
+	gulp.task('jst:dev', function() {
+		return gulp.src(require('../pipeline').templateFilesToInject)
+				.pipe(plugins.jst())
+				.pipe(gulp.dest('.tmp/public/jst.js'))
+				.pipe(plugins.notify({ message: 'jst dev task complete' }));
 	});
 };
