@@ -10,7 +10,7 @@
  * 		https://github.com/gruntjs/grunt-contrib-coffee
  */
 module.exports = function(gulp, plugins) {
-	gulp.task('coffee', function() {
+	gulp.task('coffee:dev', function() {
 		gulp.src('assest/js/**/**.coffee')
 		.pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
 		.pipe(gulp.dest('.tmp/public/js/'))
