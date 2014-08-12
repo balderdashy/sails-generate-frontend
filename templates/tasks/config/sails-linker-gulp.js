@@ -13,7 +13,7 @@
  */
 // todo - add css and templates sections to layout.ejs. add prod,dev, etc
 module.exports = function(gulp, plugins) {
-	gulp.task('sails-linker-gulp:devJs', ['compileAssets'], function() {
+	gulp.task('sails-linker-gulp:devJs', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JavaScript
@@ -29,7 +29,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp devJs task complete' }));
 	});
 	  
-	gulp.task('sails-linker-gulp:devJsRelative', ['compileAssets'], function() {
+	gulp.task('sails-linker-gulp:devJsRelative', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JavaScript
@@ -46,7 +46,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp devJsRelative task complete' }));
 	});
 	
-	gulp.task('sails-linker-gulp:prodJs', ['compileAssets'], function() {
+	gulp.task('sails-linker-gulp:prodJs', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JavaScript
@@ -62,7 +62,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp prodJs task complete' }));
 	});
 	
-	gulp.task('sails-linker-gulp:prodJsRelative', ['compileAssets'], function() {
+	gulp.task('sails-linker-gulp:prodJsRelative', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JavaScript
@@ -79,7 +79,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp prodJsRelative task complete' }));
 	});
 	
-	gulp.task('sails-linker-gulp:devStyles', ['compileAssets', 'sails-linker-gulp:devJs'], function() {
+	gulp.task('sails-linker-gulp:devStyles', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				.pipe(plugins.linker({
@@ -94,7 +94,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp devStyles task complete' }));
 	});
   
-  	gulp.task('sails-linker-gulp:devStylesRelative', ['compileAssets'], function() {
+  	gulp.task('sails-linker-gulp:devStylesRelative', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
 				.pipe(plugins.linker({
@@ -110,7 +110,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp devStylesRelative task complete' }));
 	});
 
-	gulp.task('sails-linker-gulp:prodStyles', ['compileAssets'], function() {
+	gulp.task('sails-linker-gulp:prodStyles', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
 				.pipe(plugins.linker({
@@ -125,7 +125,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp prodStyles task complete' }));
 	});
 	
-  	gulp.task('sails-linker-gulp:prodStylesRelative', ['compileAssets'], function() {
+  	gulp.task('sails-linker-gulp:prodStylesRelative', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
 				.pipe(plugins.linker({
@@ -141,7 +141,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.notify({ message: 'sails-linker-gulp prodStylesRelative task complete' }));
 	});
 	
-	gulp.task('sails-linker-gulp:devTpl', ['compileAssets', 'sails-linker-gulp:devStyles'], function() {
+	gulp.task('sails-linker-gulp:devTpl', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/index.html', 'views/**/*.html', 'views/**/*.ejs'])
 				// Link the JST Templates
