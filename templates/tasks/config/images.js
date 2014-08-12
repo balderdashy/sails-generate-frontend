@@ -1,4 +1,10 @@
-// todo - make more robust and possible move to copy.js
+/**
+ * Copies images to .tmp/images after compressing them.
+ *
+ * ---------------------------------------------------------------
+ *
+ *
+ */
 module.exports = function(gulp, plugins) {
 	 gulp.task('images', function() {
 		return gulp.src('assets/images/**/*')
