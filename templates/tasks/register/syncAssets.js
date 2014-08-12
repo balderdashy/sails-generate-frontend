@@ -1,9 +1,15 @@
-// todo - modify fully for gulp
-module.exports = function (gulp) {
-	gulp.task('syncAssets', [
-		'jst:dev',
-		'less:dev',
-		'sync:dev',
-		'coffee:dev'
-	]);
+module.exports = function (gulp, plugins) {
+	gulp.task('syncAssets', function(cb) {
+		plugins.sequence(
+			// 'jst:dev',
+			// 'images',
+			// 'less:dev',
+			// 'sync:dev',
+			// 'coffee:dev',
+			'compileAssets',
+			'images',
+			'linkAssets',
+			cb
+		);
+	});
 };
