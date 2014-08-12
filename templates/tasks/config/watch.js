@@ -8,15 +8,13 @@
  * - the `tasks/pipeline.js` file
  * and re-run the appropriate tasks.
  *
- * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-watch
  *
  */
 module.exports = function(gulp, plugins) {
 	var server = plugins.livereload();
 	gulp.task('watch:api', function() {
 		// Watch Style files
-		return gulp.watch('api/**/*', ['compileAssets', 'images', 'linkAssets'])
+		return gulp.watch('api/**/*', ['syncAssets'])
 				.on('change', function(file) {
 					server.changed(file.path);
 				});
@@ -24,7 +22,7 @@ module.exports = function(gulp, plugins) {
 	
 	gulp.task('watch:assets', function() {
 		// Watch assets
-		return gulp.watch(['assets/**/*', 'tasks/pipeline.js'], ['compileAssets', 'images', 'linkAssets'])
+		return gulp.watch(['assets/**/**/*', 'tasks/pipeline.js'], ['syncAssets'])
 				.on('change', function(file) {
 					server.changed(file.path);
 				});
