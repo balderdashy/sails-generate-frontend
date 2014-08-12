@@ -1,4 +1,10 @@
-module.exports = function (gulp) {
-	//grunt.registerTask('default', ['compileAssets', 'linkAssets',  'watch']);
-	gulp.task('default', ['compileAssets', 'images', 'linkAssets', 'watch:api', 'watch:assets']);
+module.exports = function (gulp, plugins) {
+	gulp.task('default', function(cb) {
+		plugins.sequence(
+			'compileAssets',
+			['images', 'linkAssets'],
+			['watch:api', 'watch:assets'],
+			cb
+		);
+	});
 };
