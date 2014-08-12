@@ -7,8 +7,6 @@
  *  javascript functions that you pass data to and return HTML. This can
  *  speed up template rendering on the client, and reduce bandwidth usage.)
  *
- * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-jst
  *
  */
 
