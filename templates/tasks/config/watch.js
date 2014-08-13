@@ -10,7 +10,7 @@
  *
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 	var server = plugins.livereload();
 	gulp.task('watch:api', function() {
 		// Watch Style files
