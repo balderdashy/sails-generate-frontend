@@ -8,7 +8,7 @@
  * dependencies, mixins, variables, resets, etc. before other stylesheets)
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 
 	gulp.task('less:dev', function() {
 		return gulp.src('assets/styles/importer.less')
@@ -19,6 +19,6 @@ module.exports = function(gulp, plugins) {
 					})
 				)
 				.pipe(gulp.dest('.tmp/public/styles/'))
-				.pipe(plugins.notify({ message: 'less dev task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'less dev task complete' })));
 	});
 };
