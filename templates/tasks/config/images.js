@@ -5,11 +5,11 @@
  *
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 	 gulp.task('images', function() {
 		return gulp.src('assets/images/**/*')
 				.pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
 				.pipe(gulp.dest('.tmp/public/images'))
-				.pipe(plugins.notify({ message: 'Images task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Images task complete' })));
 	});
 };
