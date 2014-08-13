@@ -7,7 +7,7 @@
  * .tmp/public/contact directory
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 
 	gulp.task('concat:js', function() {
 		return gulp.src(require('../pipeline').jsFilesToInject)
@@ -17,7 +17,7 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.rename({ suffix: '.min' }))
 				.pipe(plugins.uglify(/* {mangle: true} */))
 				.pipe(gulp.dest('./.tmp/public/concat'))
-				.pipe(plugins.notify({ message: 'Concatenate Scripts task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Concatenate Scripts task complete' })));
 	});
 	
 	gulp.task('concat:css', function() {
@@ -27,7 +27,8 @@ module.exports = function(gulp, plugins) {
 				.pipe(plugins.rename({ suffix: '.min' }))
 				.pipe(plugins.minifyCss())
 				.pipe(gulp.dest('./.tmp/public/concat'))
-				.pipe(plugins.notify({ message: 'Concatenate CSS task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Concatenate CSS task complete' })));
 	});
 
 };
+
