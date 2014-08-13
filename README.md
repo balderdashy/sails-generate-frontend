@@ -1,7 +1,7 @@
 ![image_squidhome@2x.png](http://i.imgur.com/RIvu9.png)
-
 # sails-generate-frontend-gulp
-
+-----------------------------------------------
+[![NPM version][npm-version-image]][npm-url] [![NPM downloads][npm-downloads-image]][npm-url] [![Dependency Status][dependency-image]][dependency-url] [![MIT License][license-image]][license-url]
 
 A `frontend` generator for use with the Sails command-line interface that works with gulp and sails lift. This generator creates client side assets and files with grunt configurations and tasks that manage the front end assets for a sails project. To see more infomation about how it works look [here](./docs/overview.md).
 
@@ -95,8 +95,19 @@ See `FAQ.md`.
 ### License
 
 **[MIT](./LICENSE)**
-&copy; 2014 [balderdashy](http://github.com/balderdashy) & [contributors]
-[Mike McNeil](http://michaelmcneil.com), [Balderdash](http://balderdash.co) & contributors
+&copy; 2014 [Karnith](http://github.com/Karnith)
 
 [Sails](http://sailsjs.org) is free and open-source under the [MIT License](http://sails.mit-license.org/).
 
+[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-url]: LICENSE
+
+[npm-url]: https://npmjs.org/package/sails-generate-frontend-gulp
+[npm-version-image]: http://img.shields.io/npm/v/sails-generate-frontend-gulp.svg?style=flat
+[npm-downloads-image]: http://img.shields.io/npm/dm/sails-generate-frontend-gulp.svg?style=flat
+
+[dependency-image]: https://gemnasium.com/Karnith/sails-generate-frontend-gulp.svg?style=flat
+[dependency-url]: https://gemnasium.com/Karnith/sails-generate-frontend-gulp
+
+[coverage-image]: http://img.shields.io/coveralls/Karnith/sails-generate-frontend-gulp/master.svg?style=flat
+[coverage-url]: https://coveralls.io/r/Karnith/sails-generate-frontend-gulp?branch=master
