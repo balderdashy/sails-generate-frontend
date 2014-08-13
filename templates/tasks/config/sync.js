@@ -10,11 +10,11 @@
  *
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 	gulp.task('sync:dev', function() {
 		return gulp.src(['./assets/**/*.!(coffee|less)', '!assets/images{,/**}'])
 				.pipe(plugins.changed('.tmp/public'))
 				.pipe(gulp.dest('.tmp/public'))
-				.pipe(plugins.notify({ message: 'Sync task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Sync task complete' })));
 	});
 };
