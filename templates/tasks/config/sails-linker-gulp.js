@@ -12,7 +12,7 @@
  *
  */
 // todo - add css and templates sections to layout.ejs. add prod,dev, etc
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 	gulp.task('sails-linker-gulp:devJs', function() {
 		// Read templates
 		return gulp.src(['.tmp/public/**/*.html', 'views/**/*.html', 'views/**/*.ejs'])
@@ -26,7 +26,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp devJs task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devJs task complete' })));
 	});
 	  
 	gulp.task('sails-linker-gulp:devJsRelative', function() {
@@ -43,7 +43,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp devJsRelative task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devJsRelative task complete' })));
 	});
 	
 	gulp.task('sails-linker-gulp:prodJs', function() {
@@ -59,7 +59,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp prodJs task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp prodJs task complete' })));
 	});
 	
 	gulp.task('sails-linker-gulp:prodJsRelative', function() {
@@ -76,7 +76,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp prodJsRelative task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp prodJsRelative task complete' })));
 	});
 	
 	gulp.task('sails-linker-gulp:devStyles', function() {
@@ -91,7 +91,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp devStyles task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devStyles task complete' })));
 	});
   
   	gulp.task('sails-linker-gulp:devStylesRelative', function() {
@@ -107,7 +107,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp devStylesRelative task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devStylesRelative task complete' })));
 	});
 
 	gulp.task('sails-linker-gulp:prodStyles', function() {
@@ -122,7 +122,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp prodStyles task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp prodStyles task complete' })));
 	});
 	
   	gulp.task('sails-linker-gulp:prodStylesRelative', function() {
@@ -138,7 +138,7 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp prodStylesRelative task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp prodStylesRelative task complete' })));
 	});
 	
 	gulp.task('sails-linker-gulp:devTpl', function() {
@@ -154,6 +154,6 @@ module.exports = function(gulp, plugins) {
 				}))
 				// Write modified files to www/
 				.pipe(gulp.dest('views/'))
-				.pipe(plugins.notify({ message: 'sails-linker-gulp devTpl task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'sails-linker-gulp devTpl task complete' })));
 	});
 };
