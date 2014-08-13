@@ -10,7 +10,7 @@
  *
  */
 
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 
 	var templateFilesToInject = [
 		'templates/**/*.html'
@@ -20,6 +20,6 @@ module.exports = function(gulp, plugins) {
 		return gulp.src(require('../pipeline').templateFilesToInject)
 				.pipe(plugins.jst())
 				.pipe(gulp.dest('.tmp/public/jst.js'))
-				.pipe(plugins.notify({ message: 'jst dev task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'jst dev task complete' })));
 	});
 };
