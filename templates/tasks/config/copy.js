@@ -11,15 +11,15 @@
  * Copies all directories nd files from the .tmp/public directory into a www directory.
  *
  */
-module.exports = function(gulp, plugins) {
+module.exports = function(gulp, plugins, growl) {
 	gulp.task('copy:dev', function() {
 		return gulp.src(['./assets/**/*.!(coffee|less)', '!assets/images{,/**}'])
 				.pipe(gulp.dest('.tmp/public'))
-				.pipe(plugins.notify({ message: 'Copy dev task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Copy dev task complete' })));
 	});
 	gulp.task('copy:build', function() {
 		return gulp.src('.tmp/public/**/*')
 				.pipe(gulp.dest('www'))
-				.pipe(plugins.notify({ message: 'Copy build task complete' }));
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Copy build task complete' })));
 	});
 };
