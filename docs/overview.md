@@ -101,7 +101,7 @@ html
     // SCRIPTS END
 ```
 
-Let's say we have `assets/styles/main.css`, `assets/styles/a.js`,  and `assets/styles/b.js`. Given our setup, once we run `sails lift` our `index.html` will look like this.
+Let's say we have `assets/styles/main.css`, `assets/js/a.js`,  and `assets/js/b.js`. Given our setup, once we run `sails lift` our `index.html` will look like this.
 
 ```html
 <!DOCTYPE html>
