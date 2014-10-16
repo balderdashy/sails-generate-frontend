@@ -48,8 +48,6 @@ var templateFilesToInject = [
   'templates/**/*.html'
 ];
 
-
-
 // Prefix relative paths to source files so they point to the proper locations
 // (i.e. where the other Grunt tasks spit them out, or in some cases, where
 // they reside in the first place)
