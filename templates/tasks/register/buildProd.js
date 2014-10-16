@@ -3,13 +3,8 @@ module.exports = function (gulp, plugins) {
 		plugins.sequence(
 			'compileAssets',
 			'concat:js',
-<<<<<<< HEAD
-            'concat:css',
-            'uglify:dist',
-=======
 			'concat:css',
 			'uglify:dist',
->>>>>>> origin/master
 			'cssmin:dist',
 			'linkAssetsBuildProd',
 			'clean:build',
