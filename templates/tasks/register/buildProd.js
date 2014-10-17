@@ -1,11 +1,15 @@
-module.exports = function (grunt) {
-	grunt.registerTask('buildProd', [
-		'compileAssets',
-		'concat',
-		'uglify',
-		'cssmin',
-		'linkAssetsBuildProd',
-		'clean:build',
-		'copy:build'
-	]);
+module.exports = function (gulp, plugins) {
+	gulp.task('buildProd', function(cb) {
+		plugins.sequence(
+			'compileAssets',
+			'concat:js',
+			'concat:css',
+			'uglify:dist',
+			'cssmin:dist',
+			'linkAssetsBuildProd',
+			'clean:build',
+			'copy:build',
+			cb
+		);
+	});
 };

@@ -7,22 +7,18 @@
  * This allows you to control the ordering yourself, i.e. import your
  * dependencies, mixins, variables, resets, etc. before other stylesheets)
  *
- * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-less
  */
-module.exports = function(grunt) {
+module.exports = function(gulp, plugins, growl) {
 
-	grunt.config.set('less', {
-		dev: {
-			files: [{
-				expand: true,
-				cwd: 'assets/styles/',
-				src: ['importer.less'],
-				dest: '.tmp/public/styles/',
-				ext: '.css'
-			}]
-		}
+	gulp.task('less:dev', function() {
+		return gulp.src('assets/styles/importer.less')
+				.pipe(
+					plugins.less({
+						expand: true,
+						ext: '.css'
+					})
+				)
+				.pipe(gulp.dest('.tmp/public/styles/'))
+				.pipe(plugins.if(growl, plugins.notify({ message: 'less dev task complete' })));
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-less');
 };

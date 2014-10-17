@@ -5,17 +5,14 @@
  *
  * Minifies css files and places them into .tmp/public/min directory.
  *
- * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-cssmin
  */
-module.exports = function(grunt) {
+module.exports = function(gulp, plugins, growl) {
 
-	grunt.config.set('cssmin', {
-		dist: {
-			src: ['.tmp/public/concat/production.css'],
-			dest: '.tmp/public/min/production.min.css'
-		}
-	});
-
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	gulp.task('cssmin:dist', function() {
+		return gulp.src('.tmp/public/concat/production.css')
+				.pipe(plugins.rename({ suffix: '.min' }))
+				.pipe(plugins.minifyCss())
+				.pipe(gulp.dest('./.tmp/public/min'))
+				.pipe(plugins.if(growl, plugins.notify({ message: 'Minify CSS task complete' })));
+		});
 };

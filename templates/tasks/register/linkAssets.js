@@ -1,10 +1,9 @@
-module.exports = function (grunt) {
-	grunt.registerTask('linkAssets', [
-		'sails-linker:devJs',
-		'sails-linker:devStyles',
-		'sails-linker:devTpl',
-		'sails-linker:devJsJade',
-		'sails-linker:devStylesJade',
-		'sails-linker:devTplJade'
-	]);
+module.exports = function (gulp, plugins) {
+	gulp.task('linkAssets', function(cb) {
+		plugins.sequence(
+			'sails-linker-gulp:devAssets',
+			'sails-linker-gulp:devViews',
+			cb
+		);
+	});
 };

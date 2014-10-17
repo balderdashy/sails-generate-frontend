@@ -6,33 +6,12 @@
  * Compiles coffeeScript files from `assest/js` into Javascript and places them into
  * `.tmp/public/js` directory.
  *
- * For usage docs see:
- * 		https://github.com/gruntjs/grunt-contrib-coffee
  */
-module.exports = function(grunt) {
-
-	grunt.config.set('coffee', {
-		dev: {
-			options: {
-				bare: true,
-				sourceMap: true,
-				sourceRoot: './'
-			},
-			files: [{
-				expand: true,
-				cwd: 'assets/js/',
-				src: ['**/*.coffee'],
-				dest: '.tmp/public/js/',
-				ext: '.js'
-			}, {
-				expand: true,
-				cwd: 'assets/js/',
-				src: ['**/*.coffee'],
-				dest: '.tmp/public/js/',
-				ext: '.js'
-			}]
-		}
+module.exports = function(gulp, plugins, growl) {
+	gulp.task('coffee:dev', function() {
+		gulp.src('assets/js/**/**.coffee')
+		.pipe(plugins.coffee({bare: true}).on('error', plugins.util.log))
+		.pipe(gulp.dest('.tmp/public/js/'))
+		.pipe(plugins.if(growl, plugins.notify({ message: 'Coffee compile task complete' })));
 	});
-
-	grunt.loadNpmTasks('grunt-contrib-coffee');
 };
