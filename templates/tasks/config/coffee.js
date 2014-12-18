@@ -7,7 +7,7 @@
  * `.tmp/public/js` directory.
  *
  * For usage docs see:
- * 		https://github.com/gruntsjs/grunt-contrib-coffee
+ * 		https://github.com/gruntjs/grunt-contrib-coffee
  */
 module.exports = function(grunt) {
 
