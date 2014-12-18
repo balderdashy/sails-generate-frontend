@@ -6,16 +6,16 @@ This generator creates asset files and directories as grunt configuration and ta
 The front end asset are simply copied over from this generators `/template` directory. They are placed in your sails projects at the `/assets` directory.
 
 ## Generation of Grunt Config and Task Files
-There is another [sails genereator](https://github.com/balderdashy/sails-generate-gruntfile) that genereates a gruntfile that is configured to look for grunt config and tasks in a `/tasks/config` and `/tasks/register` directories respectively. Knowing this, the frontend generator will create a tasks folder and populate it with config and register directories that include the grunt files to set up configuation and registering tasks.
+There is another [sails generator](https://github.com/balderdashy/sails-generate-gruntfile) that generates a gruntfile that is configured to look for grunt config and tasks in a `/tasks/config` and `/tasks/register` directories respectively. Knowing this, the frontend generator will create a tasks folder and populate it with config and register directories that include the grunt files to set up configuation and registering tasks.
 
 There are three tasks that are accessable to developers via the terminal. This is the default behavior for each one:
 
 ### sails lift
 1. Empties out contents of the `/.tmp/public` folder. This folder is where sails looks to serve static assets and where all of your assets will be placed.
-2. Takes HTML files from `/assets/templates` directory and precompiles underscore templates into a JST file. These precompiled templates are placed in `/.tmp/public/jst.js`
+2. Takes HTML files from `/assets/templates` directory and precompiles underscore templates into a JST file. These precompiled templates are placed in `/.tmp/public/scriptst.js`
 3. Takes an `importer.less` file found in `/assets/styles` and compiles your less files into css based on what's in this file. Having one less file importing all of your other less files is a convention that many front end developers use, and the name of this file can be changed in the `/tasks/config/less.js` file. The compiled css will be placed in `/.tmp/public/styles/importer.css'
 4. Copies the rest of the assets, except coffeescript and less files, in the `/assest` directory into the `/.tmp/public` directory.
-5. Compiles coffeescript files in `/assets/js` to javascript and places them in the `/.tmp/public/js` directory.
+5. Compiles coffeescript files in `/assets/scripts` to javascript and places them in the `/.tmp/public/scripts` directory.
 6. Automatically injects `<script>` and `<link>` tags into any HTML located in `/.tmp/public`, EJS or JADE file in `/views`.
 The important thing to understand is that this asset injection should be placed in files that act as a layout file for your app. For single page apps this would be something like an `index.html` file and for apps that send server side views this should be something like a `layout.ejs` or `layout.jade` file. Usage for how to injet files is showin in `tasks/config/sails-linker.js` or can be found [here](https://github.com/Zolmeister/grunt-sails-linker). A more detailed description of this task can be found below.
 7. Sets up a watch task that will run this entire task again if there are changes detected in the `/assets` directory or the `tasks/pipeline.js` file. This task is optimized so that instead of deleting entire directories and files, it just syncs changes that were made.
@@ -101,7 +101,7 @@ html
     // SCRIPTS END
 ```
 
-Let's say we have `assets/styles/main.css`, `assets/styles/a.js`,  and `assets/styles/b.js`. Given our setup, once we run `sails lift` our `index.html` will look like this.
+Let's say we have `assets/styles/main.css`, `assets/scripts/a.js`,  and `assets/scripts/b.js`. Given our setup, once we run `sails lift` our `index.html` will look like this.
 
 ```html
 <!DOCTYPE html>
@@ -124,8 +124,8 @@ Let's say we have `assets/styles/main.css`, `assets/styles/a.js`,  and `assets/s
 
     <!-- script tags are going to be injected here -->
     <!--SCRIPT-->
-    <scripts src="js/a.js"></scripts>
-    <scripts src="js/b.js"></scripts>
+    <scripts src="scripts/a.js"></scripts>
+    <scripts src="scripts/b.js"></scripts>
     <!--SCRIPTS END-->
   </body>
 </html>
