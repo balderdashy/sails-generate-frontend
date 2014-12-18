@@ -12,7 +12,7 @@ There are three tasks that are accessable to developers via the terminal. This i
 
 ### sails lift
 1. Empties out contents of the `/.tmp/public` folder. This folder is where sails looks to serve static assets and where all of your assets will be placed.
-2. Takes HTML files from `/assets/templates` directory and precompiles underscore templates into a JST file. These precompiled templates are placed in `/.tmp/public/scriptst.js`
+2. Takes HTML files from `/assets/templates` directory and precompiles underscore templates into a JST file. These precompiled templates are placed in `/.tmp/public/jst.js`
 3. Takes an `importer.less` file found in `/assets/styles` and compiles your less files into css based on what's in this file. Having one less file importing all of your other less files is a convention that many front end developers use, and the name of this file can be changed in the `/tasks/config/less.js` file. The compiled css will be placed in `/.tmp/public/styles/importer.css'
 4. Copies the rest of the assets, except coffeescript and less files, in the `/assest` directory into the `/.tmp/public` directory.
 5. Compiles coffeescript files in `/assets/scripts` to javascript and places them in the `/.tmp/public/scripts` directory.
