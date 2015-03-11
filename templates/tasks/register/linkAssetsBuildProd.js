@@ -5,6 +5,9 @@ module.exports = function (grunt) {
 		'sails-linker:devTpl',
 		'sails-linker:prodJsRelativeJade',
 		'sails-linker:prodStylesRelativeJade',
-		'sails-linker:devTplJade'
+		'sails-linker:devTplJade',
+		'sails-linker:prodJsRelativeHandlebars',
+		'sails-linker:prodStylesRelativeHandlebars',
+		'sails-linker:devTplHandlebars'
 	]);
 };

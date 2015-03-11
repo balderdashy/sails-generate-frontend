@@ -16,8 +16,8 @@ There are three tasks that are accessable to developers via the terminal. This i
 3. Takes an `importer.less` file found in `/assets/styles` and compiles your less files into css based on what's in this file. Having one less file importing all of your other less files is a convention that many front end developers use, and the name of this file can be changed in the `/tasks/config/less.js` file. The compiled css will be placed in `/.tmp/public/styles/importer.css'
 4. Copies the rest of the assets, except coffeescript and less files, in the `/assest` directory into the `/.tmp/public` directory.
 5. Compiles coffeescript files in `/assets/js` to javascript and places them in the `/.tmp/public/js` directory.
-6. Automatically injects `<script>` and `<link>` tags into any HTML located in `/.tmp/public`, EJS or JADE file in `/views`.
-The important thing to understand is that this asset injection should be placed in files that act as a layout file for your app. For single page apps this would be something like an `index.html` file and for apps that send server side views this should be something like a `layout.ejs` or `layout.jade` file. Usage for how to injet files is showin in `tasks/config/sails-linker.js` or can be found [here](https://github.com/Zolmeister/grunt-sails-linker). A more detailed description of this task can be found below.
+6. Automatically injects `<script>` and `<link>` tags into any HTML located in `/.tmp/public`, EJS, JADE or Handlebars file in `/views`.
+The important thing to understand is that this asset injection should be placed in files that act as a layout file for your app. For single page apps this would be something like an `index.html` file and for apps that send server side views this should be something like a `layout.ejs`, `layout.jade` or `layout.handlebars` file. Usage for how to injet files is showin in `tasks/config/sails-linker.js` or can be found [here](https://github.com/Zolmeister/grunt-sails-linker). A more detailed description of this task can be found below.
 7. Sets up a watch task that will run this entire task again if there are changes detected in the `/assets` directory or the `tasks/pipeline.js` file. This task is optimized so that instead of deleting entire directories and files, it just syncs changes that were made.
 
 ### sails build
@@ -41,7 +41,7 @@ Lets say we are working on a single page app in our sails project. Since it is a
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
-    <titel></title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
   </head>
