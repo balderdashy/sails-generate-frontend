@@ -54,11 +54,20 @@ var templateFilesToInject = [
 // (i.e. where the other Grunt tasks spit them out, or in some cases, where
 // they reside in the first place)
 module.exports.cssFilesToInject = cssFilesToInject.map(function(path) {
-  return '.tmp/public/' + path;
+  var tmpPath = '.tmp/public/';
+  if (path.substring(0,1) == '!')
+    return '!' + tmpPath + path.substring(1);
+  return tmpPath + path;
 });
 module.exports.jsFilesToInject = jsFilesToInject.map(function(path) {
-  return '.tmp/public/' + path;
+  var tmpPath = '.tmp/public/';
+  if (path.substring(0,1) == '!')
+    return '!' + tmpPath + path.substring(1);
+  return tmpPath + path;
 });
 module.exports.templateFilesToInject = templateFilesToInject.map(function(path) {
-  return 'assets/' + path;
+  var tmpPath = 'assets/';
+  if (path.substring(0,1) == '!')
+    return '!' + tmpPath + path.substring(1);
+  return tmpPath + path;
 });
