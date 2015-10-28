@@ -17,6 +17,7 @@ module.exports = function(grunt) {
 
 	grunt.config.set('copy', {
 		dev: {
+			options: {copySymlinkAsSymlink: true},
 			files: [{
 				expand: true,
 				cwd: './assets',
