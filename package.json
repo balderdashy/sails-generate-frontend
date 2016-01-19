@@ -18,7 +18,7 @@
   "dependencies": {
     "lodash": ">=2.4.x",
     "merge-defaults": ">=0.1.0",
-    "sails-generate-sails.io.js": "^0.12.0"
+    "sails-generate-sails.io.js": "^0.13.0"
   },
   "devDependencies": {
     "sails-generate": "*",
