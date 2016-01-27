@@ -6,6 +6,9 @@
  *
  * (Note that you can take advantage of Grunt-style wildcard/glob/splat expressions
  * for matching multiple files, and the ! prefix for excluding files.)
+ *
+ * For more information see:
+ *   https://github.com/balderdashy/sails-docs/blob/master/anatomy/myApp/tasks/pipeline.js.md
  */
 
 // Path to public folder
