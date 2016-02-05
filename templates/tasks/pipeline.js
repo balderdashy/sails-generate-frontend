@@ -5,14 +5,12 @@
  * compiled and linked from your views and static HTML files.
  *
  * (Note that you can take advantage of Grunt-style wildcard/glob/splat expressions
- * for matching multiple files, and the ! prefix for excluding files.)
+ * for matching multiple files.)
  *
  * For more information see:
  *   https://github.com/balderdashy/sails-docs/blob/master/anatomy/myApp/tasks/pipeline.js.md
  */
 
-// Path to public folder
-var tmpPath = '.tmp/public/';
 
 // CSS files to inject in order
 //
@@ -57,15 +55,24 @@ var templateFilesToInject = [
 
 
 
+
+
+
+
+// Default path for public folder (see documentation for more information)
+var tmpPath = '.tmp/public/';
+
 // Prefix relative paths to source files so they point to the proper locations
 // (i.e. where the other Grunt tasks spit them out, or in some cases, where
 // they reside in the first place)
-module.exports.cssFilesToInject = cssFilesToInject.map(transformPath);
-module.exports.jsFilesToInject = jsFilesToInject.map(transformPath);
-module.exports.templateFilesToInject = templateFilesToInject.map(transformPath);
+module.exports.cssFilesToInject = cssFilesToInject.map(function(cssPath) {
+  return require('path').join('.tmp/public/', cssPath);
+});
+module.exports.jsFilesToInject = jsFilesToInject.map(function(jsPath) {
+  return require('path').join('.tmp/public/', jsPath);
+});
+module.exports.templateFilesToInject = templateFilesToInject.map(function(tplPath) {
+  return require('path').join('assets/',tplPath);
+});
 
-// Transform paths relative to the "assets" folder to be relative to the public
-// folder, preserving "exclude" operators.
-function transformPath(path) {
-  return (path.substring(0,1) == '!') ? ('!' + tmpPath + path.substring(1)) : (tmpPath + path);
-}
+
