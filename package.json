@@ -1,7 +1,7 @@
 {
   "name": "sails-generate-frontend",
   "version": "0.12.1",
-  "description": "Generate a frontend for Sails.",
+  "description": "Default generator for frontend code files in new Sails projects. Creates the default contents of the `assets/` folder when you run `sails new` on the command-line.  Also creates a subset of the boilerplate Grunt task files (in `tasks/`); specifically, the files make up the conventional asset pipeline.",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
@@ -13,19 +13,13 @@
     "generate",
     "plugin"
   ],
+  "repo": "https://github.com/balderdashy/sails-generate-frontend",
   "author": "balderdashy",
   "license": "MIT",
   "dependencies": {
-    "lodash": "~2.4.1",
-    "merge-defaults": ">=0.1.0",
+    "lodash": "2.4.1",
+    "merge-defaults": "0.1.0",
     "sails-generate-sails.io.js": "^0.13.0"
-  },
-  "devDependencies": {
-    "sails-generate": "*",
-    "reportback": "*",
-    "fs-extra": "~0.8.1",
-    "bower": "~1.3.1",
-    "async": "~0.6.2"
   },
   "sailsGenerator": {
     "type": "frontend",
