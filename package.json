@@ -19,7 +19,7 @@
   "dependencies": {
     "lodash": "2.4.1",
     "merge-defaults": "0.1.0",
-    "sails-generate-sails.io.js": "^0.13.0"
+    "sails-generate-sails.io.js": "^0.14.0"
   },
   "sailsGenerator": {
     "type": "frontend",
