@@ -12,10 +12,9 @@ To report a bug, [click here](http://sailsjs.com/bugs).
 
 ## Getting Help
 
-First, please [read the docs on generators](http://sailsjs.com/documentation/concepts/extending-sails/generators).  If you have lingering questions, see the <a href="http://sailsjs.com/support" target="_blank" title="Node.js framework for building realtime APIs.">support section of our website</a> for more information, or [tweet](https://twitter.com/sailsjs) at us.
+First, please [read the docs on generators](http://sailsjs.com/documentation/concepts/extending-sails/generators).  If you have lingering questions, see the <a href="http://sailsjs.com/support" target="_blank" title="Node.js framework for building realtime APIs.">support section of our website</a> for more resources.
 
-
-## Contributing &nbsp; [![Build Status](https://travis-ci.org/balderdashy/sails-generate-frontend.svg?branch=master)](https://travis-ci.org/balderdashy/sails-generate-frontend)
+## Contributing
 
 Please observe the guidelines and conventions laid out in the [Sails project contribution guide](http://sailsjs.com/contribute) when opening issues or submitting pull requests.
 
