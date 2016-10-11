@@ -13,7 +13,7 @@
     "generate",
     "plugin"
   ],
-  "repo": "https://github.com/balderdashy/sails-generate-frontend",
+  "repository": "https://github.com/balderdashy/sails-generate-frontend",
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {

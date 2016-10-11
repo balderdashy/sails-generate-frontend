@@ -12,7 +12,7 @@ To report a bug, [click here](http://sailsjs.com/bugs).
 
 ## Getting help
 
-Read [the docs on generators](http://sailsjs.com/documentation/concepts/extending-sails/generators), and see the <a href="http://sailsjs.com/support" target="_blank" title="Support and resources for Sails/Node.js apps">support section of our website</a> for more resources.
+Read [the docs on generators](http://sailsjs.com/docs/concepts/extending-sails/generators), and see the <a href="http://sailsjs.com/support" target="_blank" title="Support and resources for Sails/Node.js apps">support section of our website</a> for more resources.
 
 ## Contributing
 
