@@ -10,9 +10,9 @@ To report a bug, [click here](http://sailsjs.com/bugs).
 
 > This is a built-in module in the Sails command-line tool.  It is installed automatically when you run `npm install sails -g`.
 
-## Getting Help
+## Getting help
 
-First, please [read the docs on generators](http://sailsjs.com/documentation/concepts/extending-sails/generators).  If you have lingering questions, see the <a href="http://sailsjs.com/support" target="_blank" title="Node.js framework for building realtime APIs.">support section of our website</a> for more resources.
+Read [the docs on generators](http://sailsjs.com/documentation/concepts/extending-sails/generators), and see the <a href="http://sailsjs.com/support" target="_blank" title="Support and resources for Sails/Node.js apps">support section of our website</a> for more resources.
 
 ## Contributing
 

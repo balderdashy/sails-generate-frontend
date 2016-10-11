@@ -1,5 +1,5 @@
 /**
- * `linkAssetsBuildProd`
+ * `tasks/register/linkAssetsBuildProd.js`
  *
  * ---------------------------------------------------------------
  *
@@ -7,7 +7,7 @@
  * it is a helper called by the `buildProd` tasklist.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/link-assets-build-prod-js
+ *   http://sailsjs.com/anatomy/tasks/register/link-assets-build-prod-js
  *
  */
 module.exports = function(grunt) {

@@ -1,5 +1,5 @@
 /**
- * `watch`
+ * `tasks/config/watch`
  *
  * ---------------------------------------------------------------
  *
@@ -10,8 +10,8 @@
  * - the `tasks/pipeline.js` file
  * and re-run the appropriate tasks.
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-watch
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/watch-js
  *
  */
 module.exports = function(grunt) {

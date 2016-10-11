@@ -1,12 +1,12 @@
 /**
- * `uglify`
+ * `tasks/config/uglify`
  *
  * ---------------------------------------------------------------
  *
  * Minify client-side JavaScript files using UglifyJS.
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-uglify
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/uglify-js
  *
  */
 module.exports = function(grunt) {

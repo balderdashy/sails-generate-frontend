@@ -1,5 +1,5 @@
 /**
- * Compress CSS files.
+ * `tasks/config/cssmin`
  *
  * ---------------------------------------------------------------
  *
@@ -10,8 +10,8 @@
  * all CSS files from `assets/styles/` (and potentially your LESS importer
  * file from `assets/styles/importer.less`)
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-cssmin
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/cssmin-js
  *
  */
 module.exports = function(grunt) {

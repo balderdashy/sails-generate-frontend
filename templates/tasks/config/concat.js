@@ -1,5 +1,5 @@
 /**
- * `concat`
+ * `tasks/config/concat`
  *
  * ---------------------------------------------------------------
  *
@@ -10,8 +10,8 @@
  * This is used as an intermediate step to generate monolithic files
  * that can then be passed in to `uglify` and/or `cssmin` for minification.
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-concat
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/concat-js
  *
  */
 module.exports = function(grunt) {

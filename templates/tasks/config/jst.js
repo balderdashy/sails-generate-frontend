@@ -1,5 +1,5 @@
 /**
- * `jst`
+ * `tasks/config/jst`
  *
  * ---------------------------------------------------------------
  *
@@ -14,8 +14,8 @@
  *  "precompiling", and it can considerably speed up template rendering on
  *  the client, and even reduce bandwidth usage and related expenses.)
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-jst
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/jst-js
  *
  */
 

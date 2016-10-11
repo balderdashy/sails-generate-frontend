@@ -1,5 +1,5 @@
 /**
- * `build`
+ * `tasks/register/build.js`
  *
  * ---------------------------------------------------------------
  *
@@ -14,7 +14,7 @@
  * will be run instead of this one.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/build-js
+ *   http://sailsjs.com/anatomy/tasks/register/build-js
  *
  */
 module.exports = function(grunt) {

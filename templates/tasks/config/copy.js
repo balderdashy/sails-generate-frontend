@@ -1,5 +1,5 @@
 /**
- * `copy`
+ * `tasks/config/copy`
  *
  * ---------------------------------------------------------------
  *
@@ -15,8 +15,8 @@
  * #### Via the `build` tasklist (`sails www`)
  * Copies all directories and files from the .tmp/public directory into a www directory.
  *
- * For usage docs see:
- *   https://github.com/gruntjs/grunt-contrib-copy
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/copy-js
  *
  */
 module.exports = function(grunt) {

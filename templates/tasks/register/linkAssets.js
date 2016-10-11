@@ -1,5 +1,5 @@
 /**
- * `linkAssets`
+ * `tasks/register/linkAssets.js`
  *
  * ---------------------------------------------------------------
  *
@@ -8,7 +8,7 @@
  * (but only if the `grunt-sails-linker` package is in use).
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/link-assets-js
+ *   http://sailsjs.com/anatomy/tasks/register/link-assets-js
  *
  */
 module.exports = function(grunt) {

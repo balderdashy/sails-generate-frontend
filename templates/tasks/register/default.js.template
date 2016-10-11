@@ -1,5 +1,5 @@
 /**
- * `default`
+ * `tasks/register/default.js`
  *
  * ---------------------------------------------------------------
  *
@@ -18,7 +18,7 @@
  * > before defaulting to `default.js`.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/default-js
+ *   http://sailsjs.com/anatomy/tasks/register/default-js
  *
  */
 module.exports = function (grunt) {

@@ -1,5 +1,5 @@
 /**
- * `sails-linker`
+ * `tasks/config/sails-linker`
  *
  * ---------------------------------------------------------------
  *
@@ -23,8 +23,8 @@
  * templates, CoffeeScript, or LESS files are bundled into these same two minified
  * files as well.
  *
- * For usage docs see:
- *   https://github.com/Zolmeister/grunt-sails-linker
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/sails-linker-js
  *
  */
 module.exports = function(grunt) {

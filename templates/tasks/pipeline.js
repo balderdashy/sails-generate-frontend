@@ -1,5 +1,5 @@
 /**
- * grunt/pipeline.js
+ * `tasks/pipeline.js`
  *
  * The order in which your css, javascript, and template files should be
  * compiled and linked from your views and static HTML files.
@@ -8,7 +8,7 @@
  * for matching multiple files, and ! in front of an expression to ignore files.)
  *
  * For more information see:
- *   https://github.com/balderdashy/sails-docs/blob/master/anatomy/myApp/tasks/pipeline.js.md
+ *   http://sailsjs.com/anatomy/tasks/pipeline.js
  */
 
 

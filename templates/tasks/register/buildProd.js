@@ -1,5 +1,5 @@
 /**
- * `buildProd`
+ * `tasks/register/buildProd.js`
  *
  * ---------------------------------------------------------------
  *
@@ -12,7 +12,7 @@
  * deploy to a CDN.
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/build-prod-js
+ *   http://sailsjs.com/anatomy/tasks/register/build-prod-js
  *
  */
 module.exports = function(grunt) {

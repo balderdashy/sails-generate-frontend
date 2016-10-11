@@ -1,5 +1,5 @@
 /**
- * `prod`
+ * `tasks/register/prod.js`
  *
  * ---------------------------------------------------------------
  *
@@ -8,7 +8,7 @@
  * `NODE_ENV=production node app`).
  *
  * For more information see:
- *   http://sailsjs.org/documentation/anatomy/my-app/tasks/register/prod-js
+ *   http://sailsjs.com/anatomy/tasks/register/prod-js
  *
  */
 module.exports = function(grunt) {

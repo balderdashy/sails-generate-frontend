@@ -1,5 +1,5 @@
 /**
- * `sync`
+ * `tasks/config/sync`
  *
  * ---------------------------------------------------------------
  *
@@ -11,8 +11,8 @@
  * to `grunt-contrib-copy`, but copies only those files that have
  * actually changed since the last time the task was run.
  *
- * For usage docs see:
- *   https://github.com/tomusdrw/grunt-sync
+ * For more information, see:
+ *   http://sailsjs.com/anatomy/tasks/config/sync-js
  *
  */
 module.exports = function(grunt) {
