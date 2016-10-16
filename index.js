@@ -9,7 +9,7 @@
 
 module.exports = {
 
-  templatesDirectory: require('path').resolve(__dirname,'../templates'),
+  templatesDirectory: require('path').resolve(__dirname,'./templates'),
 
   /**
    * The targets to generate.
