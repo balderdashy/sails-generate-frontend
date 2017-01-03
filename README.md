@@ -16,7 +16,7 @@ Read [the docs on generators](http://sailsjs.com/docs/concepts/extending-sails/g
 
 ## Contributing
 
-Please observe the guidelines and conventions laid out in the [Sails project contribution guide](http://sailsjs.com/contribute) when opening issues or submitting pull requests.
+Please observe the guidelines and conventions laid out in the [Sails project contribution guide](http://sailsjs.com/documentation/contributing) when opening issues or submitting pull requests.
 
 [![NPM package info](https://nodei.co/npm/sails-generate-frontend.png?downloads=true)](http://npmjs.com/package/sails-generate-frontend)
 
