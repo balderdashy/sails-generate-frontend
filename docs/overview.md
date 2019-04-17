@@ -43,7 +43,7 @@ Lets say we are working on a single page app in our sails project. Since it is a
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
-    <titel></title>
+    <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
   </head>
